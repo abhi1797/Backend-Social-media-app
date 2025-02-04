@@ -12,6 +12,7 @@ origins = ["https://www.google.com"]
 
 
 app = FastAPI()
+#cors policy implementation
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
