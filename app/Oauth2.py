@@ -7,7 +7,8 @@ from sqlalchemy.orm import Session
 from .config import settings
 
 #this give the token url when user tries to login with its username and password
-oauth2_scheme = OAuth2PasswordBearer(tokenUrl='login')
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl='login') 
+#from routers/ auth.py we take the url
 #SECRET_KEY
 #Algorithm
 #expiration time of the token
