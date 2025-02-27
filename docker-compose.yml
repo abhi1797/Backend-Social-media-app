@@ -3,22 +3,16 @@ services:
   api:
     build: .
     container_name: fastapi
-    environment:
-      - DATABASE_HOSTNAME=db
-      - DATABASE_PORT=5432
-      - DATABASE_PASSWORD=Bababubu17
-      - DATABASE_NAME=Socialmedia
-      - DATABASE_USERNAME=postgres
-      - SECRET_KEY=1b0b01deb22e015c2e69937713016261699ae7c5fd9fe63ae5deaf9f59ea6e97
-      - ALGORITHM=HS256
-      - ACCESS_TOKEN_EXPIRE_MINUTES=30
+    env_file:
+      - ./.env
+    
     ports:
       - 8000:8000
     depends_on:
       db:
         condition: service_healthy
     volumes:
-      - ./:usr/src/app:ro
+      - ./:/usr/src/app:ro
     command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
     
   db:
