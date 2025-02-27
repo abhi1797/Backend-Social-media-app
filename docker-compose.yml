@@ -18,9 +18,8 @@ services:
   db:
     image: postgres
     container_name: postgres-db1
-    environment:
-    - POSTGRES_PASSWORD=Bababubu17
-    - POSTGRES_DB=Socialmedia
+    env_file:
+      - ./.envpostgres
     ports:
       - 5432:5432
     healthcheck:
