@@ -11,7 +11,7 @@ This is a **FastAPI** backend service for a social media application, providing 
 - 📄 API documentation with Swagger UI (/docs) and ReDoc (/redoc)
 ---
 
-## 1️⃣ Installation
+## 1️ Installation
 
 ### Clone the Repository
 ```bash
@@ -32,7 +32,7 @@ pip install -r requirements.txt
 
 ---
 
-## 2️⃣ Environment Variables
+## 2️ Environment Variables
 Create a `.env` file with the following variables:
 ```ini
 DATABASE_HOSTNAME=localhost
@@ -47,7 +47,7 @@ ACCESS_TOKEN_EXPIRE_MINUTES=30
 
 ---
 
-## 3️⃣ Running the Application
+## 3️ Running the Application
 
 ### Run FastAPI Locally
 ```bash
@@ -60,7 +60,7 @@ uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 
 ---
 
-## 4️⃣ Docker Deployment
+##  Docker Deployment
 
 ### Build and Run Docker Container
 ```bash
@@ -68,7 +68,7 @@ docker-compose up -d
 ```
 
 
-## 6️⃣ Database Migrations
+## 4 Database Migrations
 
 ### Run Alembic Migrations
 ```bash
@@ -81,7 +81,7 @@ alembic revision --autogenerate -m "Describe migration"
 ```
 
 
-## 8️⃣ API Endpoints
+## 5 API Endpoints
 
 ### Authentication
 | Method | Endpoint       | Description         |
@@ -105,7 +105,7 @@ alembic revision --autogenerate -m "Describe migration"
 
 
 
-## 🔟 Contributing
+## 6 Contributing
 Feel free to submit pull requests or report issues.
 
 1. Fork the repository
